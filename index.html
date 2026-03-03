@@ -1,0 +1,245 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HQG Security - Nền tảng SOC chuyên biệt cho Y tế</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Background 3D -->
+    <div id="canvas-container"></div>
+    
+    <div class="overlay" id="main-content">
+        <header class="glass-header">
+            <div class="logo">
+                <i data-lucide="shield-check" class="icon-logo"></i> 
+                <span>HQG<span class="text-cyan">SEC</span></span>
+            </div>
+            <nav>
+                <a href="#features">Giải pháp</a>
+                <a href="#data-sources">Dữ liệu chuẩn</a>
+                <a href="javascript:void(0)" class="btn-outline" onclick="alert('Vui lòng liên hệ: sales@hqgsecurity.vn')">
+                    <i data-lucide="phone"></i> Liên hệ
+                </a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="hero">
+                <div class="badge-glow">
+                    <span class="pulse-dot"></span>
+                    <i data-lucide="heart-pulse" class="badge-icon"></i>
+                    Giải pháp SOC chuyên biệt cho Y tế
+                </div>
+                <h1>Bảo vệ Dữ liệu Bệnh nhân<br/><span class="text-gradient">Phân tích Rủi ro Đa chiều</span></h1>
+                <p>Nền tảng giám sát an ninh mạng tích hợp các nguồn dữ liệu chuẩn từ NVD, CWE, MITRE, NIST và CISA. Chuyên biệt cho hệ thống y tế với khả năng hoạt động hoàn toàn Offline, bảo mật tối đa.</p>
+                <div class="actions">
+                    <button id="start-demo-btn" class="btn-primary">
+                        <i data-lucide="activity"></i> Xem Demo Phân Tích
+                    </button>
+                </div>
+            </div>
+
+            <!-- Data Sources Section -->
+            <div id="data-sources" class="section-title">
+                <h2>Tích hợp Dữ liệu Chuẩn Quốc tế</h2>
+                <p>Tất cả dữ liệu được lưu trữ cục bộ - Không phụ thuộc Internet</p>
+            </div>
+
+            <div class="data-sources-grid">
+                <div class="data-card">
+                    <div class="data-logo nvd">NVD</div>
+                    <div class="data-info">
+                        <h4>National Vulnerability Database</h4>
+                        <p>Cơ sở dữ liệu lỗ hổng quốc gia Hoa Kỳ</p>
+                        <span class="data-stat">200,000+ CVE</span>
+                    </div>
+                </div>
+                <div class="data-card">
+                    <div class="data-logo cwe">CWE</div>
+                    <div class="data-info">
+                        <h4>Common Weakness Enumeration</h4>
+                        <p>Hệ thống phân loại điểm yếu phần mềm</p>
+                        <span class="data-stat">Software Flaws</span>
+                    </div>
+                </div>
+                <div class="data-card">
+                    <div class="data-logo mitre">MITRE</div>
+                    <div class="data-info">
+                        <h4>MITRE ATT&CK Framework</h4>
+                        <p>Ma trận chiến thuật & kỹ thuật tấn công</p>
+                        <span class="data-stat">14 Tactics, 200+ Techniques</span>
+                    </div>
+                </div>
+                <div class="data-card">
+                    <div class="data-logo nist">NIST</div>
+                    <div class="data-info">
+                        <h4>NIST Cybersecurity Framework</h4>
+                        <p>Khung kiểm soát thiết lập phòng thủ SP 800-53</p>
+                        <span class="data-stat">SC-7 Firewall Focus</span>
+                    </div>
+                </div>
+                <div class="data-card">
+                    <div class="data-logo cisa">CISA</div>
+                    <div class="data-info">
+                        <h4>CISA KEV Catalog</h4>
+                        <p>Danh mục tổng hợp lỗ hổng đang khai thác</p>
+                        <span class="data-stat">Known Exploited</span>
+                    </div>
+                </div>
+                <div class="data-card">
+                    <div class="data-logo epss">EPSS</div>
+                    <div class="data-info">
+                        <h4>Exploit Prediction Scoring</h4>
+                        <p>Đánh giá dự đoán khả năng bị khai thác</p>
+                        <span class="data-stat">AI Risk Score</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features Section -->
+            <div id="features" class="section-title">
+                <h2>Tính năng Nổi bật</h2>
+                <p>Giải pháp toàn diện từ phát hiện đến phòng thủ chủ động</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="f-icon cyan"><i data-lucide="database"></i></div>
+                    <h3>CVE, CWE & EPSS</h3>
+                    <p>Tra cứu hơn 200,000 lỗ hổng. Phân loại mã lỗi phần mềm bằng CWE. Chấm điểm xác suất bị khai thác (EPSS) để tối ưu khắc phục.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="f-icon red"><i data-lucide="target"></i></div>
+                    <h3>MITRE ATT&CK Mapping</h3>
+                    <p>Ánh xạ trực tiếp các chiến thuật tấn công APT. Nhận diện sớm các dấu hiệu xâm nhập vào mạng y tế.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="f-icon green"><i data-lucide="shield-check"></i></div>
+                    <h3>Tường lửa theo chuẩn NIST</h3>
+                    <p>Đề xuất thiết lập Tường lửa Firewall/WAF ứng với kiểm soát an ninh mạng y tế SC-7, SC-7.1, SC-7.2, SC-7.3.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="f-icon orange"><i data-lucide="alert-triangle"></i></div>
+                    <h3>Cảnh báo CISA KEV</h3>
+                    <p>Cảnh báo tin tặc đang tận dụng lỗ hổng thực tế. Đồng bộ từ danh mục CISA Known Exploited Vulnerabilities.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="f-icon blue"><i data-lucide="heart-pulse"></i></div>
+                    <h3>Chuyên biệt khối Y tế</h3>
+                    <p>Hỗ trợ phân tích hạ tầng mạng PACS, giao thức DICOM, HL7 FHIR. Bảo vệ máy MRI, CT Scanner, và luồng EMR.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="f-icon purple"><i data-lucide="layout-dashboard"></i></div>
+                    <h3>Báo cáo điều hành trực quan</h3>
+                    <p>Cung cấp các dashboard và báo cáo chi tiết, giúp lãnh đạo bệnh viện nắm bắt nhanh chóng tình hình an ninh mạng tổng thể.</p>
+                </div>
+            </div>
+
+            <!-- Stats Section -->
+            <div class="stats-section">
+                <div class="stat-item">
+                    <div class="stat-number">200K+</div>
+                    <div class="stat-label">Lỗ hổng CVE</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">14</div>
+                    <div class="stat-label">Chiến thuật MITRE</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Độ tương thích SC-7</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Báo cáo trực quan</div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>© 2026 HQG Security. Giải pháp bảo mật khép kín chuyên biệt cho ngành Y tế.</p>
+        </footer>
+    </div>
+
+    <!-- HUD DEMO -->
+    <div id="demo-hud" class="hidden">
+        <div class="hud-glass">
+            <div class="hud-header">
+                <div class="hud-title">
+                    <i data-lucide="activity"></i> 
+                    TRUNG TÂM PHÂN TÍCH AN NINH Y TẾ
+                </div>
+                <button id="close-demo-btn" class="hud-close"><i data-lucide="x"></i></button>
+            </div>
+            
+            <div class="hud-body">
+                <!-- Log Panel -->
+                <div class="hud-panel terminal-panel">
+                    <div class="panel-title">
+                        <i data-lucide="terminal"></i> TIẾN TRÌNH RÀ SOÁT
+                    </div>
+                    <div id="terminal-content" class="terminal-content"></div>
+                </div>
+
+                <!-- Result Panel -->
+                <div class="hud-panel result-panel" id="result-panel">
+                    <div class="panel-title">
+                        <i data-lucide="file-text"></i> BÁO CÁO PHÂN TÍCH
+                    </div>
+                    
+                    <div class="result-grid">
+                        <div class="result-card danger-glow">
+                            <div class="rc-label">Điểm Rủi Ro</div>
+                            <div class="rc-value" id="res-score">--</div>
+                        </div>
+                        <div class="result-card warning-glow">
+                            <div class="rc-label">Tổng Lỗ Hổng</div>
+                            <div class="rc-value" id="res-cve">--</div>
+                        </div>
+                        <div class="result-card primary-glow">
+                            <div class="rc-label">Dự Đoán Khai Thác EPSS</div>
+                            <div class="rc-value" id="res-epss">--</div>
+                        </div>
+
+                        <div class="details-section">
+                            <div class="detail-box">
+                                <h4><i data-lucide="server"></i> Phát hiện Tài sản Y tế</h4>
+                                <p id="res-assets" class="detail-text">Đang chờ dữ liệu...</p>
+                            </div>
+                            
+                            <div class="detail-box">
+                                <h4><i data-lucide="code"></i> Cơ sở điểm yếu CWE</h4>
+                                <p id="res-cwe" class="detail-text">Đang chờ dữ liệu...</p>
+                            </div>
+                            
+                            <div class="detail-box">
+                                <h4><i data-lucide="target"></i> Ma trận MITRE ATT&CK</h4>
+                                <p id="res-mitre" class="detail-text">Đang chờ dữ liệu...</p>
+                            </div>
+                            
+                            <div class="detail-box">
+                                <h4><i data-lucide="alert-triangle"></i> Dữ liệu CISA KEV</h4>
+                                <p id="res-cisa" class="detail-text">Đang chờ dữ liệu...</p>
+                            </div>
+                            
+                            <div class="detail-box">
+                                <h4><i data-lucide="shield-check"></i> Biện pháp đề xuất chuẩn NIST</h4>
+                                <p id="res-nist" class="detail-text">Đang chờ dữ liệu...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3D Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>
