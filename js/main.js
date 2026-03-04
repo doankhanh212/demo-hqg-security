@@ -140,11 +140,13 @@ const closeBtn = document.getElementById('close-demo-btn');
 const demoHud = document.getElementById('demo-hud');
 const terminalOutput = document.getElementById('terminal-content');
 const resultPanel = document.getElementById('result-panel');
+const exportReportBtn = document.getElementById('export-report-btn');
+const REPORT_STORAGE_KEY = 'hqgExecutiveReportData';
 
 // Mock Data - Healthcare focused, Full Vietnamese Diacritics
 const mockData = {
     score: 8.5,
-    cveCount: "12 (3 Nghiệm trọng)",
+    cveCount: "12 (3 Nghiêm trọng)",
     epss: "89%",
     
     assets: "Phát hiện 3 phân vùng mạng bệnh viện:\\n" +
@@ -210,6 +212,7 @@ startBtn.addEventListener('click', () => {
     document.getElementById('res-cisa').innerText = "Đang phân tích dữ liệu...";
     document.getElementById('res-nist').innerText = "Đang phân tích dữ liệu...";
     resultPanel.classList.remove('active');
+    exportReportBtn.disabled = true;
 
     demoHud.classList.remove('hidden');
     runScanSimulation();
@@ -251,7 +254,29 @@ function showResults() {
     typeText('res-mitre', mockData.mitre, 10);
     typeText('res-cisa', mockData.cisa, 10);
     typeText('res-nist', mockData.nist, 10);
+
+    exportReportBtn.disabled = false;
 }
+
+exportReportBtn.addEventListener('click', () => {
+    const reportData = {
+        generatedAt: new Date().toISOString(),
+        score: mockData.score,
+        cveCount: mockData.cveCount,
+        epss: mockData.epss,
+        assets: mockData.assets,
+        cwe: mockData.cwe,
+        mitre: mockData.mitre,
+        cisa: mockData.cisa,
+        nist: mockData.nist
+    };
+
+    localStorage.setItem(REPORT_STORAGE_KEY, JSON.stringify(reportData));
+    const reportWindow = window.open('report.html', '_blank');
+    if (!reportWindow) {
+        window.location.href = 'report.html';
+    }
+});
 
 function typeText(elementId, content, speed = 10) {
     const el = document.getElementById(elementId);
