@@ -133,7 +133,7 @@ window.addEventListener('resize', () => {
 
 
 /* ========================================= */
-/* 2. DEMO HUD - HEALTHCARE SOC SIMULATION   */
+/* 2. DEMO HUD - HEALTHCARE RISK SIMULATION  */
 /* ========================================= */
 const startBtn = document.getElementById('start-demo-btn');
 const closeBtn = document.getElementById('close-demo-btn');
